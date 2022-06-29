@@ -16,16 +16,19 @@ namespace csharp_oop_shop
 
         public Prodotto()
         {
-            this.code = code; //new Random().Next(10000,100000);
+            this.code = code; 
             this.name = name;
             this.description = description;
             this.price = price;
             this.iva = iva;
         }
 
-        public int GetCode()
+        public string GetCode()
         {
-            return this.code = new Random().Next(10000, 100000);
+            this.code = new Random().Next(1, 100000000);
+            return this.code.ToString().PadLeft(9, '0');
+             
+
         }
 
         public string Name
@@ -59,7 +62,8 @@ namespace csharp_oop_shop
 
         public string FullName()
         {
-            return this.name + "-" + this.code.ToString();
+            return this.name + "-" + this.code;
+
         }
     }
 }
