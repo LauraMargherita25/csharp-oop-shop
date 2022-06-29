@@ -13,5 +13,21 @@ namespace csharp_oop_shop
         string description;
         int price;
         int iva;
+
+        public Prodotto()
+        {
+            this.code = code; //new Random().Next(10000,100000);
+            this.name = name;
+            this.description = description;
+            this.price = price;
+            this.iva = iva;
+        }
+
+        public int GetCode()
+        {
+            return this.code = new Random().Next(10000, 100000);
+        }
+
+        
     }
 }
