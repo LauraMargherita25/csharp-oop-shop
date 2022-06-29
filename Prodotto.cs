@@ -56,5 +56,10 @@ namespace csharp_oop_shop
         {
             return this.price = price + price * iva / 100;
         }
+
+        public string FullName()
+        {
+            return this.name + "-" + this.code.ToString();
+        }
     }
 }
