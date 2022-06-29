@@ -28,6 +28,28 @@ namespace csharp_oop_shop
             return this.code = new Random().Next(10000, 100000);
         }
 
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
+
+        public string Description 
+        { 
+            get { return description; }
+            set { description = value; }
+        }
         
+        public int Price
+        {
+            get { return price; }   
+            set { price = value; }
+        }
+        
+        public int Iva
+        {
+            get { return iva; }
+            set { iva = value; }
+        }
     }
 }
