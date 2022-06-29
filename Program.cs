@@ -1,2 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+using csharp_oop_shop;
+
+Prodotto mioProdotto = new Prodotto();
+
+
