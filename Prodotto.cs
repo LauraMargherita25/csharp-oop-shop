@@ -16,7 +16,7 @@ namespace csharp_oop_shop
 
         public Prodotto()
         {
-            this.code = code; 
+            this.code = new Random().Next(1, 100000000); 
             this.name = name;
             this.description = description;
             this.price = price;
@@ -25,10 +25,11 @@ namespace csharp_oop_shop
 
         public string GetCode()
         {
-            this.code = new Random().Next(1, 100000000);
-            return this.code.ToString().PadLeft(9, '0');
-             
+            //this.code = new Random().Next(1, 100000000);
+            //string stringedCode = this.code.ToString().PadLeft(9, '0');
+            //return stringedCode;
 
+            return this.code.ToString().PadLeft(9, '0');
         }
 
         public string Name
@@ -62,7 +63,7 @@ namespace csharp_oop_shop
 
         public string FullName()
         {
-            return this.name + "-" + this.code;
+            return this.name + "-" + this.GetCode();
 
         }
     }
