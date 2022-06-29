@@ -51,5 +51,10 @@ namespace csharp_oop_shop
             get { return iva; }
             set { iva = value; }
         }
+
+        public int TaxedPrice(int iva)
+        {
+            return this.price = price + price * iva / 100;
+        }
     }
 }

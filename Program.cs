@@ -7,3 +7,8 @@ Console.WriteLine(mioProdotto.GetCode());
 mioProdotto.Name ="lavatrice";
 Console.WriteLine(mioProdotto.Name);
 
+mioProdotto.Price = 20;
+Console.WriteLine(mioProdotto.Price);
+
+Console.WriteLine(mioProdotto.TaxedPrice(20));
+
