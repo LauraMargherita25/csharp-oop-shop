@@ -32,7 +32,8 @@ namespace csharp_oop_shop
         {
             Console.WriteLine("Nome prodotto: {0}", this.FullName());
             Console.WriteLine("Descrizione: {0}", this.Description);
-            Console.WriteLine("Prezzo: {0}", this.TaxedPrice());
+            Console.WriteLine("Prezzo: {0}$", this.Price);
+            Console.WriteLine("Prezzo tassato: {0}$", this.TaxedPrice());
         }
         public int TaxedPrice()
         {

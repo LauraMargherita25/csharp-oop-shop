@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using csharp_oop_shop;
 
-Prodotto mioProdotto = new Prodotto("computer", "qualcosa a riguardo del computer", 2000, 20);
+Prodotto mioProdotto = new Prodotto("Computer", "Qualcosa a riguardo del computer", 2000, 20);
 
 mioProdotto.PrintProduct();
 
