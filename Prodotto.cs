@@ -6,64 +6,42 @@ using System.Threading.Tasks;
 
 namespace csharp_oop_shop
 {
-    internal class Prodotto
+    public class Prodotto
     {
-        int code;
-        string name;
-        string description;
-        int price;
-        int iva;
+        //int id;
+        //string name;
+        //string description;
+        //int price;
+        //int iva;
 
-        public Prodotto()
+        public Prodotto(string name, string description, int price, int iva)
         {
-            this.code = new Random().Next(1, 100000000); 
-            this.name = name;
-            this.description = description;
-            this.price = price;
-            this.iva = iva;
+            this.Id = new Random().Next(1, 100000000);
+            this.Name = name;
+            this.Description = description;
+            this.Price = price;
+            this.Iva = iva;
         }
+        public int Id { get; private set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public int Price { get; set; }
+        public int Iva { get; set; }
 
-        public string GetCode()
+        public void PrintProduct()
         {
-            //this.code = new Random().Next(1, 100000000);
-            //string stringedCode = this.code.ToString().PadLeft(9, '0');
-            //return stringedCode;
-
-            return this.code.ToString().PadLeft(9, '0');
+            Console.WriteLine("Nome prodotto: {0}", this.FullName());
+            Console.WriteLine("Descrizione: {0}", this.Description);
+            Console.WriteLine("Prezzo: {0}", this.TaxedPrice());
         }
-
-        public string Name
+        public int TaxedPrice()
         {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public string Description 
-        { 
-            get { return description; }
-            set { description = value; }
-        }
-        
-        public int Price
-        {
-            get { return price; }   
-            set { price = value; }
-        }
-        
-        public int Iva
-        {
-            get { return iva; }
-            set { iva = value; }
-        }
-
-        public int TaxedPrice(int iva)
-        {
-            return this.price = price + price * iva / 100;
+            return this.Price += this.Price * this.Iva / 100;
         }
 
         public string FullName()
         {
-            return this.name + "-" + this.GetCode();
+            return this.Name + "-" + this.Id.ToString().PadLeft(8, '0');
 
         }
     }
